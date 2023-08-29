@@ -1,0 +1,18 @@
+ion-content.login {
+    ion-toolbar {
+        padding: 20% 5%;
+
+        .welcome h1 {
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            color: #404041;
+
+            b {
+                color: #35C2C1;
+            }
+        }
+    }
+
+}
