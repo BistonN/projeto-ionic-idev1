@@ -4,6 +4,7 @@ import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     LoginRoutingModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ]
 })
 export class LoginModule { }

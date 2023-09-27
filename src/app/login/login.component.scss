@@ -1,16 +1,80 @@
 ion-content.login {
+
     ion-toolbar {
-        padding: 20% 5%;
+        margin-bottom: 5%;
 
         .welcome h1 {
             font-size: 35px;
             font-style: normal;
             font-weight: 700;
             line-height: 130%;
-            color: #404041;
 
             b {
                 color: #35C2C1;
+            }
+        }
+    }
+
+    ion-item:nth-child(n+2) {
+        margin-top: 13px;
+    }
+
+    a {
+        color: #6A707C;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+    }
+
+    .hr {
+        position: relative;
+        height: 30px;
+        margin-top: 20px;
+
+        div {
+            position: absolute;
+            right: calc(50% - 53.5px);
+            top: -10px;
+            background-color: white;
+            padding: 0 15px;
+
+            color: #6A707C;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        hr {
+            border: 1px solid #E8ECF4;
+            margin: 0;
+            border-radius: 15px;
+            background-color: #E8ECF4;
+        }
+    }
+
+    ion-button {
+        --border-radius: 8px !important;
+        --padding-top: 21px !important;
+        --padding-bottom: 21px !important;
+    }
+
+    .login-buttons {
+        ion-button:nth-child(n+2) {
+            margin-left: 3%;
+        }
+        ion-button {
+            border-radius: 8px;
+            border: 1px solid #E8ECF4;
+            height: 100%;
+            width: 33%;
+
+            ion-buttons {
+                ion-icon:before {
+                    font-size: 50px !important;
+                }
             }
         }
     }
