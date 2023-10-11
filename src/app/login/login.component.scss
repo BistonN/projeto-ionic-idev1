@@ -17,6 +17,15 @@ ion-content.login {
 
     ion-item:nth-child(n+2) {
         margin-top: 13px;
+        position: relative;
+        ion-icon {
+            color: #6A707C;
+            position: absolute;
+            right: 20px;
+            z-index: 10;
+            font-size: 30px;
+            top: calc(25% - 15px);
+        }
     }
 
     a {
@@ -79,4 +88,19 @@ ion-content.login {
         }
     }
 
+}
+
+ion-item {
+    div {
+        width: 100%;
+    }
+
+    p {
+        color: rgb(188, 0, 0);
+        padding: 0 16px;
+    }
+
+    .error {
+        border: solid 2px rgb(188, 0, 0);
+    }
 }

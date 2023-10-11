@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { faCoffee, faAddressBook, faSynagogue } from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent  implements OnInit {
-  constructor() { }
-  icons = {
-    "faCoffee": faCoffee,
-    "faAddressBook": faAddressBook,
-    "faSynagogue": faSynagogue
+
+export class LoginComponent {
+
+  formulario: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.formulario = this.formBuilder.group({
+      'email': ['', Validators.required],
+      'senha': ['', Validators.required]
+    });
   }
-  ngOnInit() {}
+
+  validarForm() {
+    if (this.formulario.valid) {
+      const dados = this.formulario.value;
+      console.log('Dados do formulário:', dados);
+    }
+  }
 
 }
