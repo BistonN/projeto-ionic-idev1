@@ -29,6 +29,7 @@
     "@fortawesome/angular-fontawesome": "^0.13.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@ionic/angular": "^7.0.0",
+    "@ionic/storage-angular": "^4.0.0",
     "@mdi/js": "^7.2.96",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",

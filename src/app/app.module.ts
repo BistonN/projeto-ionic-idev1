@@ -6,7 +6,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IonicStorageModule } from '@ionic/storage-angular';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    FontAwesomeModule
+    IonicStorageModule.forRoot()
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
