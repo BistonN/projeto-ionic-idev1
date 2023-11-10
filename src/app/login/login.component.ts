@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
@@ -9,7 +9,7 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./login.component.scss'],
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   formulario: FormGroup;
   formularioValido = true;
@@ -25,15 +25,22 @@ export class LoginComponent {
     });
   }
 
+  async ngOnInit(): Promise<void> {
+    if (await this.storage.get('usuario')) {
+      this.router.navigate(['/home'], { replaceUrl: true });
+    }
+  }
+
   async validarForm() {
     this.formularioValido = this.formulario.valid;
     if (this.formulario.valid) {
       const dados = this.formulario.value;
       console.log('Dados do formulário:', dados);
+
       await this.storage.set('usuario', dados.email);
       await this.storage.set('senha', dados.senha);
       
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home'], { replaceUrl: true });
     }
   }
 

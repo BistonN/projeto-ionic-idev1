@@ -2,7 +2,7 @@
 
   <div class="header">
     <div>
-      <ion-button class="apps" slot="icon-only">
+      <ion-button class="apps" slot="icon-only" (click)="logoff()">
         <ion-icon name="apps-outline"></ion-icon>
       </ion-button>
       <ion-text>
@@ -12,7 +12,7 @@
 
     <div>
       <ion-button class="usuario">
-        <ion-text>Renan Gabriel</ion-text>
+        <ion-text>{{nomeUsuario}}</ion-text>
         <ion-icon name="person-outline"></ion-icon>
       </ion-button>
     </div>
